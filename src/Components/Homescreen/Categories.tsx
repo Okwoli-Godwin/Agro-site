@@ -46,9 +46,9 @@ const Categories = () => {
               <Featured><h2>Featured Collection</h2></Featured>
             <Topnavs>
                 <Navs onClick={Toggle}>Plant Produce</Navs>
-                <Navs onClick={Toggle2}>Animal Produce</Navs>
-                <Navs onClick={Toggle3}>Fruits and Vegetables</Navs>
-                <Navs onClick={Toggle4}>Oil and Crops</Navs>
+                <Navs2 onClick={Toggle2}>Animal Produce</Navs2>
+                <Navs2 onClick={Toggle3}>Fruits and Vegetables</Navs2>
+                <Navs2 onClick={Toggle4}>Oil and Crops</Navs2>
             </Topnavs>
 
             {show ? (
@@ -101,11 +101,46 @@ const Button = styled.button`
 const Navs = styled.div`
     margin-left: 45px;
     cursor: pointer;
+    width: 240px;
+    background-color: red;
     font-size: 20px;
     color: #03993f;
+    @media screen and (max-width: 890px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 890px) {
+        font-size: 16px;
+    }
+     @media screen and (max-width: 425px) {
+        font-size: 15px;
+    }
+`
+const Navs2 = styled.div`
+    margin-left: 45px;
+    cursor: pointer;
+    width: 240px;
+    font-size: 20px;
+    color: #03993f;
+    @media screen and (max-width: 890px) {
+        font-size: 18px;
+    }
+    @media screen and (max-width: 890px) {
+        font-size: 16px;
+    }
+     @media screen and (max-width: 425px) {
+        font-size: 15px;
+    }
 `
 const Topnavs = styled.div`
     display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        overflow-x: scroll;
+    }
 `
 const Wrapper = styled.div`
     width: 95%;

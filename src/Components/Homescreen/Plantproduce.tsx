@@ -118,12 +118,17 @@ const Card = styled.div`
     border-radius: 12px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     padding-bottom: 15px;
+    margin-bottom: 25px;
 `
 const Wrapper = styled.div`
-    width: 95%;
+    width: 90%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 425px) {
+        justify-content: center;
+    }
 `
 const Container = styled.div`
     width: 100%;
@@ -131,4 +136,5 @@ const Container = styled.div`
     justify-content: center;
     margin-top: 70px;
     margin-bottom: 60px;
+    overflow: visible;
 `

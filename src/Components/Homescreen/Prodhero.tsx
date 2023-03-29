@@ -69,11 +69,21 @@ const Card = styled.div`
     p{
         color: white;
         font-style: italic;
+        text-align: center;
     }
     h2{
         font-size: 80px;
         color: #fff;
         margin: 0;
+        @media screen and (max-width: 768px) {
+            font-size: 60px;
+        }
+        @media screen and (max-width: 425px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 375px) {
+            font-size: 35px;
+        }
         span{
             color: #03993f;
         }
@@ -165,6 +175,9 @@ const Container3 = styled.div`
     background-position: center;
     background-size: cover;
     position: relative;
+    @media screen and (max-width: 425px) {
+            height: 450px;
+        }
 `
 const Container2 = styled.div`
     width: 100%;
@@ -176,6 +189,9 @@ const Container2 = styled.div`
     background-position: center;
     background-size: cover;
     position: relative;
+    @media screen and (max-width: 425px) {
+            height: 450px;
+        }
 `
 const Container = styled.div`
     width: 100%;
@@ -187,4 +203,7 @@ const Container = styled.div`
     background-position: center;
     background-size: cover;
     position: relative;
+    @media screen and (max-width: 425px) {
+            height: 450px;
+        }
 `

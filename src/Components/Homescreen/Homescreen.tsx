@@ -35,10 +35,10 @@ const Homescreen = () => {
       <br />
       <br />
       <br />
-      <Newproducts />
+      {/* <Newproducts />
       <br />
       <br />
-      <Footer />
+      <Footer /> */}
     </div>
   )
 }

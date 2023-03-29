@@ -108,6 +108,8 @@ const Card = styled.div`
     overflow: hidden;
     border-radius: 13px;
     padding-bottom: 23px;
+    margin-bottom: 25px;
+    
 `
 const Featured = styled.div`
     margin: 0;
@@ -120,6 +122,10 @@ const Wrapper = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        justify-content: center;
+    }
 `
 
 const Container = styled.div`

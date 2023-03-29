@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import img from "../Assets/img.png"
 import {AiOutlineShoppingCart} from "react-icons/ai"
 import { NavLink } from 'react-router-dom'
+import {FiMenu} from "react-icons/fi"
 
 
 
@@ -48,7 +49,10 @@ const Header = () => {
                 <Icon><AiOutlineShoppingCart />
                     <Circle>0</Circle>
                 </Icon>
-            </Right>
+                      </Right>
+                    <Drop>
+                       <FiMenu />   
+                </Drop>
         </Wrapper>
     </Container>
           ) : (
@@ -77,12 +81,15 @@ const Header = () => {
                     Sign in
                 </Button>
                 </NavLink >
-                              <NavLink to="/cart">
+                              <NavLink to="/cart" style={{textDecoration: "none"}}>
                                   <Icon><AiOutlineShoppingCart />
                     <Circle>0</Circle>
                 </Icon>
                 </NavLink>
-            </Right>
+                          </Right>
+                          <Drop>
+                              <FiMenu />
+                          </Drop>
         </Wrapper>
     </Container>
           )}
@@ -91,6 +98,16 @@ const Header = () => {
 }
 
 export default Header
+const Drop = styled.div`
+    height: 100%;
+    display: none;
+    align-items: center;
+    font-size: 25px;
+    cursor: pointer;
+    @media screen and (max-width: 886px) {
+        display: flex;
+    }
+`
 const Circle = styled.div`
     width: 20px;
     height: 20px;
@@ -113,6 +130,10 @@ display: flex;
 align-items: center;
 cursor: pointer;
 position: relative;
+
+@media screen and (max-width: 884px) {
+        display: none;
+    }
 `
 const Button = styled.div`
     border: none;
@@ -132,11 +153,18 @@ const Button = styled.div`
         border: 1px solid #03993f;
         transition: 350ms all ease;
     }
+
+    @media screen and (max-width: 884px) {
+        display: none;
+    }
 `
 const Right = styled.div`
     display: flex;
     height: 100%;
     align-items: center;
+    @media screen and (max-width: 884px) {
+        display: none;
+    }
 `
 const Nav = styled.div`
     margin-left: 45px;
@@ -148,6 +176,9 @@ const Navhold = styled.div`
     height: 100%;
     display: flex;
     align-items: center;
+    @media screen and (max-width: 886px) {
+        display: none;
+    }
 `
 const Img = styled.img`
     height: 80px;
@@ -164,6 +195,9 @@ const Wrapper = styled.div`
     display: flex;
     align-items: cente;
     justify-content: space-between;
+    @media screen and (max-width: 884px) {
+        justify-content: space-between;
+    }
 `
 const Container = styled.div<{bd: string}>`
     width: 100%;

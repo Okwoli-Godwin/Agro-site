@@ -114,6 +114,7 @@ const Top = styled.div`
 const Card = styled.div`
     width: 270px;
     display: flex;
+    margin-bottom: 25px;
     flex-direction: column;
     overflow: hidden;
     border-radius: 12px;
@@ -124,7 +125,11 @@ const Wrapper = styled.div`
     width: 95%;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
+    @media screen and (max-width: 425px) {
+        justify-content: center;
+    }
 `
 const Container = styled.div`
     width: 100%;

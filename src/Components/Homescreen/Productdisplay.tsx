@@ -23,7 +23,7 @@ const Productdisplay = () => {
   return (
       <Container>
           <Wrapper>
-              <div style={{width: "63%"}}>
+              <Hold>
                   <Slider {...settings}>
                   <Right>
                     <Box>
@@ -41,7 +41,7 @@ const Productdisplay = () => {
                   </Box>
                       </Right2>
                   </Slider>
-              </div>
+              </Hold>
 
               <Left>
                   <First>
@@ -67,6 +67,12 @@ const Productdisplay = () => {
 }
 
 export default Productdisplay
+const Hold = styled.div`
+    width: 63%;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+    }
+`
 const Off = styled.div`
     position: absolute;
     width: 90px;
@@ -106,6 +112,12 @@ const Second = styled.div`
     background-size: cover;
     overflow: hidden;
     border-radius: 15px;
+    @media screen and (max-width: 768px) {
+        width: 48%;
+    }
+    @media screen and (max-width: 425px) {
+        width: 100%;
+    }
 `
 const First = styled.div`
     width: 100%;
@@ -118,11 +130,25 @@ const First = styled.div`
     background-size: cover;
     overflow: hidden;
     border-radius: 15px;
+    @media screen and (max-width: 768px) {
+        width: 48%;
+    }
+    @media screen and (max-width: 425px) {
+        width: 100%;
+    }
 `
 const Left = styled.div`
     width: 35%;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
 `
 const Button = styled.button`
     width: 130px;
@@ -185,6 +211,9 @@ const Right2 = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     /* background-color: red; */
+    @media screen and (max-width: 425px) {
+        height: 360px;
+    }
 `
 const Right = styled.div`
     width: 62%;
@@ -199,11 +228,16 @@ const Right = styled.div`
     background-repeat: no-repeat;
     background-size: cover;
     /* background-color: red; */
+    @media screen and (max-width: 425px) {
+        height: 360px;
+    }
 `
 const Wrapper = styled.div`
     width: 90%;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    
 `
 
 const Container = styled.div`

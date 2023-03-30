@@ -7,11 +7,13 @@ import Signup from './Components/Signup/Signup'
 import TalkToUs from './Components/ContactUs/TalkToUs'
 import Blog from './Components/Blog/Blog'
 import OurValues from './Components/OurValues/OurValues'
+import Ball from './Components/Ball'
 
 const App = () => {
   return (
     <div>
-      <Allroutes />
+      <Ball />
+      {/* <Allroutes /> */}
       {/* <br /> <br /> <br />
       <Blog />
       <br /><br />
